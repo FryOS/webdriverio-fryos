@@ -1,0 +1,20 @@
+{
+  "name": "webdriverio-fryos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "my-firs-test.js",
+  "scripts": {
+    "test": "wdio"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "selenium-standalone": "^6.14.1",
+    "webdriverio": "^4.12.0"
+  },
+  "devDependencies": {
+    "wdio-dot-reporter": "0.0.9",
+    "wdio-mocha-framework": "^0.5.13"
+  }
+}
