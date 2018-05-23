@@ -1,4 +1,5 @@
 node_modules
+errorShots
 *.log
 .DS_Store
 test/site/platforms/*
@@ -11,3 +12,4 @@ build
 
 /*.js
 !index.js
+
