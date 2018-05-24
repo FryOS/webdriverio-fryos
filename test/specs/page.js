@@ -12,6 +12,10 @@ export default class Page {
     getUrl(){
         return browser.getUrl();
     }
+    clickElement(selector){
+        browser.click(selector);
+    }
+
     pause(){
         browser.pause(3000);
     }
