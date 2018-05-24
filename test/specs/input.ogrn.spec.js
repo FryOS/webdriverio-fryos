@@ -4,7 +4,8 @@ const button = '//*[@id="lightsBlock"]/div/div/div[3]/div/div[2]/div/div/button'
 
 describe('input ogrn', function()  {
     it('input ogrn', function() {
-        page.open('/').searchElement('a[href="/lights"]');
+        page.open('/');
+        page.searchElement('a[href="/lights"]');
         page.clickElement('a[href="/lights"]')
 
         // .waitForVisible('input[name="ogrn"]', 3000)
