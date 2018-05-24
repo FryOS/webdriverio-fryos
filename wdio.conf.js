@@ -10,7 +10,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        './test/specs/**/getUrl.spec.js'  //*.spec.js //getUrl.spec.js//input.ogrn.spec.js
     ],
     // Patterns to exclude.
     exclude: [
@@ -77,7 +77,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'https://profit.akbars.ru',
+    baseUrl: 'https://profittest.akbars.ru/',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -129,7 +129,8 @@ exports.config = {
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
-        ui: 'bdd'
+        ui: 'bdd',
+        compilers: ['js:babel-register']
     },
     //
     // =====
