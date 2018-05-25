@@ -6,7 +6,10 @@ describe('input ogrn', function()  {
     it('input ogrn', function() {
         page.open('/');
         page.searchElement('a[href="/lights"]');
-        page.clickElement('a[href="/lights"]')
+        page.clickElement('a[href="/lights"]');
+        page.searchElement('input[name="ogrn"]');
+        page.setValue('input[name="ogrn"]', '1165275036607')
+
 
         // .waitForVisible('input[name="ogrn"]', 3000)
         // $('input[name="ogrn"]')

@@ -1,7 +1,7 @@
 export default class Page {
-    constructor() {
-        this.title = 'My Page';
-    }
+    // constructor() {
+    //     this.title = 'My Page';
+    // }
     open(path) {
         browser.url(path);
         console.log(path);
@@ -15,9 +15,12 @@ export default class Page {
     clickElement(selector){
         browser.click(selector);
     }
+    setValue(selector, value){
+        browser.setValue(selector,value);
+    }
 
-    pause(){
-        browser.pause(3000);
+    pause(ms=3000){
+        browser.pause(ms);
     }
 
 }

@@ -1,3 +1,5 @@
+const timeout = process.env.DEBUG ? 99999999 : 100000;
+
 exports.config = {
     
     //
@@ -10,7 +12,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/**/*.spec.js'  //*.spec.js //getUrl.spec.js//input.ogrn.spec.js
+        './test/specs/lights.request.spec.js'  //*.spec.js //getUrl.spec.js//input.ogrn.spec.js
     ],
     // Patterns to exclude.
     exclude: [
@@ -77,14 +79,14 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'https://profittest.akbars.ru/',
+    baseUrl: 'https://profittest.akbars.ru',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    waitforTimeout: 30000,
     //
     // Default timeout in milliseconds for request
     // if Selenium Grid doesn't send response
-    connectionRetryTimeout: 90000,
+    connectionRetryTimeout: 900000,
     //
     // Default request retries count
     connectionRetryCount: 3,
@@ -130,7 +132,9 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        compilers: ['js:babel-register']
+        compilers: ['js:babel-register'],
+        timeout: timeout
+
     },
     //
     // =====
